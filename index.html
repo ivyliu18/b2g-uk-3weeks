@@ -7,30 +7,33 @@
 <meta name="description" content="三週內，把你「亞洲邏輯」的求職素材，翻譯成英國雇主三秒讀得懂的商業價值線。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;600;700;900&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0E2A47;
-    --navy-deep:#0A1E33;
-    --teal:#18A99C;
-    --teal-bright:#1FC3B4;
-    --amber:#E8A93C;
-    --amber-deep:#CE8D1E;
-    --paper:#EEF2F4;
-    --paper-warm:#F6F8F9;
-    --ink:#12222E;
-    --ink-soft:#3A4B57;
-    --line:#D3DCE1;
-    --green:#2E9E5B;
-    --red:#C6503E;
-    --shadow:0 1px 2px rgba(14,42,71,.06),0 8px 30px rgba(14,42,71,.08);
-    --font-cjk:"Noto Sans TC",system-ui,-apple-system,"Microsoft JhengHei",sans-serif;
-    --font-lat:"Space Grotesk",var(--font-cjk);
+    --navy:#1B2A38;
+    --navy-deep:#141F2A;
+    --teal:#0E8C82;
+    --teal-bright:#12A99C;
+    --amber:#C08A3E;
+    --amber-deep:#A8752C;
+    --paper:#F3F2EC;
+    --paper-warm:#FBFAF6;
+    --paper-card:#FFFFFF;
+    --ink:#1A2126;
+    --ink-soft:#525C63;
+    --line:#DED9CE;
+    --line-soft:#E8E4DA;
+    --green:#3E8F5B;
+    --red:#B24A3A;
+    --shadow:0 1px 2px rgba(30,40,50,.04),0 10px 40px rgba(30,40,50,.06);
+    --font-cjk:"Noto Serif TC","Noto Sans TC",system-ui,-apple-system,"Microsoft JhengHei",sans-serif;
+    --font-sans:"Noto Sans TC",system-ui,-apple-system,"Microsoft JhengHei",sans-serif;
+    --font-lat:"Space Grotesk",var(--font-sans);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:var(--font-cjk);
+    font-family:var(--font-sans);
     color:var(--ink);
     background:var(--paper);
     line-height:1.75;
@@ -51,45 +54,46 @@
 
   /* ---------- hero ---------- */
   .hero{
-    background:
-      radial-gradient(120% 90% at 85% 0%, rgba(24,169,156,.14), transparent 55%),
-      linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);
-    color:#EAF1F4;
-    padding:clamp(56px,9vw,104px) 0 clamp(72px,10vw,120px);
+    background:var(--paper);
+    color:var(--ink);
+    padding:clamp(48px,7vw,88px) 0 clamp(56px,8vw,96px);
     position:relative;overflow:hidden;
+    border-bottom:1px solid var(--line);
   }
-  .hero .eyebrow{color:var(--teal-bright)}
-  .hero .eyebrow::before{background:var(--teal-bright)}
+  .hero .eyebrow{color:var(--teal)}
+  .hero .eyebrow::before{background:var(--teal)}
   .brandline{
-    font-family:var(--font-lat);font-weight:700;letter-spacing:.04em;
-    font-size:1.05rem;color:#EAF1F4;margin-bottom:clamp(40px,7vw,64px);
+    font-family:var(--font-lat);font-weight:600;letter-spacing:.04em;
+    font-size:1rem;color:var(--ink);margin-bottom:clamp(44px,7vw,72px);
     display:flex;align-items:center;gap:.55em;
   }
-  .brandline .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block}
-  .brandline small{font-family:var(--font-cjk);font-weight:400;color:#9FB4C1;letter-spacing:0;font-size:.8rem}
+  .brandline .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);display:inline-block}
+  .brandline small{font-family:var(--font-sans);font-weight:400;color:var(--ink-soft);letter-spacing:0;font-size:.8rem}
   h1{
-    font-family:var(--font-cjk);font-weight:700;
-    font-size:clamp(1.9rem,4.8vw,3.15rem);line-height:1.5;
-    letter-spacing:.01em;margin:22px 0 0;max-width:20ch;
+    font-family:var(--font-cjk);font-weight:600;
+    font-size:clamp(1.7rem,3.6vw,2.7rem);line-height:1.62;
+    letter-spacing:.02em;margin:24px 0 0;max-width:none;
+    color:var(--ink);
   }
-  h1 .hl{color:var(--teal-bright)}
+  h1 .hl{color:var(--teal);font-weight:700}
+  h1 .line{display:block;white-space:nowrap}
   .hero-sub{
-    margin-top:26px;max-width:46ch;font-size:clamp(1rem,1.7vw,1.16rem);
-    color:#BCCDD8;font-weight:400;
+    margin-top:30px;max-width:44ch;font-size:clamp(1rem,1.5vw,1.12rem);
+    color:var(--ink-soft);font-weight:400;line-height:1.9;
   }
   .hero-cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 
   /* signature: tangle -> single line */
-  .translate-viz{margin-top:clamp(48px,7vw,72px);max-width:640px}
+  .translate-viz{margin-top:clamp(48px,7vw,76px);max-width:600px}
   .translate-viz svg{width:100%;height:auto;display:block}
   .viz-labels{
-    display:flex;justify-content:space-between;margin-top:14px;
-    font-family:var(--font-lat);font-size:.74rem;letter-spacing:.04em;color:#8FA6B4;
+    display:flex;justify-content:space-between;margin-top:16px;
+    font-family:var(--font-lat);font-size:.72rem;letter-spacing:.04em;color:var(--ink-soft);
   }
-  .viz-labels b{display:block;font-family:var(--font-cjk);color:#DCE7ED;font-weight:500;font-size:.92rem;letter-spacing:0}
-  .tangle{fill:none;stroke:#5E7180;stroke-width:2;stroke-linecap:round;opacity:.85}
-  .clean{fill:none;stroke:var(--teal-bright);stroke-width:2.5;stroke-linecap:round}
-  .clean-head{fill:var(--teal-bright)}
+  .viz-labels b{display:block;font-family:var(--font-sans);color:var(--ink);font-weight:500;font-size:.9rem;letter-spacing:0}
+  .tangle{fill:none;stroke:#B3AA98;stroke-width:2;stroke-linecap:round;opacity:.9}
+  .clean{fill:none;stroke:var(--teal);stroke-width:2.5;stroke-linecap:round}
+  .clean-head{fill:var(--teal)}
 
   /* ---------- buttons ---------- */
   .btn{
@@ -99,19 +103,19 @@
     transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
     border:0;cursor:pointer;
   }
-  .btn-primary{background:var(--amber);color:var(--navy-deep)}
-  .btn-primary:hover{background:#F2B850;transform:translateY(-2px);box-shadow:0 10px 24px rgba(232,169,60,.32)}
-  .btn-ghost{background:transparent;color:#EAF1F4;border:1.5px solid rgba(234,241,244,.35)}
-  .btn-ghost:hover{border-color:var(--teal-bright);color:var(--teal-bright)}
+  .btn-primary{background:var(--amber);color:#fff}
+  .btn-primary:hover{background:var(--amber-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(192,138,62,.28)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
   .btn-lg{padding:17px 38px;font-size:1.05rem}
 
   /* ---------- section rhythm ---------- */
   section{padding:clamp(60px,9vw,104px) 0}
   .sec-head{margin-bottom:clamp(32px,5vw,52px)}
   h2{
-    font-family:var(--font-cjk);font-weight:700;
-    font-size:clamp(1.45rem,3.2vw,2.05rem);line-height:1.55;
-    letter-spacing:.01em;margin-top:16px;color:var(--ink);
+    font-family:var(--font-cjk);font-weight:600;
+    font-size:clamp(1.4rem,2.8vw,1.9rem);line-height:1.6;
+    letter-spacing:.02em;margin-top:16px;color:var(--ink);
   }
   h2 .hl{color:var(--teal)}
   p.lead{font-size:1.06rem;color:var(--ink-soft);margin-top:18px;max-width:60ch}
@@ -137,21 +141,21 @@
   .guide p{color:var(--ink-soft);font-size:.98rem}
 
   /* ---------- deliverables ---------- */
-  .deliverables{background:var(--navy);color:#EAF1F4}
-  .deliverables .eyebrow{color:var(--teal-bright)}
-  .deliverables .eyebrow::before{background:var(--teal-bright)}
-  .deliverables h2{color:#fff}
-  .del-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:5px;overflow:hidden;margin-top:8px}
-  .del{background:var(--navy);padding:34px 28px;position:relative}
+  .deliverables{background:var(--paper-warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .deliverables .eyebrow{color:var(--teal)}
+  .deliverables .eyebrow::before{background:var(--teal)}
+  .deliverables h2{color:var(--ink)}
+  .del-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:5px;overflow:hidden;margin-top:8px}
+  .del{background:var(--paper-card);padding:34px 30px;position:relative}
   .del .num{
-    font-family:var(--font-lat);font-weight:500;font-size:.8rem;letter-spacing:.1em;
-    color:var(--teal-bright);margin-bottom:18px;display:block;
+    font-family:var(--font-lat);font-weight:500;font-size:.78rem;letter-spacing:.1em;
+    color:var(--teal);margin-bottom:18px;display:block;
   }
-  .del h3{font-size:1.18rem;font-weight:700;margin-bottom:10px;color:#fff;line-height:1.5}
-  .del p{color:#AEC2CE;font-size:.94rem}
+  .del h3{font-size:1.16rem;font-weight:700;margin-bottom:10px;color:var(--ink);line-height:1.55}
+  .del p{color:var(--ink-soft);font-size:.94rem}
   .del .tag{
-    display:inline-block;margin-top:14px;font-size:.76rem;color:var(--amber);
-    border:1px solid rgba(232,169,60,.4);padding:3px 10px;border-radius:2px;letter-spacing:.02em;
+    display:inline-block;margin-top:14px;font-size:.76rem;color:var(--amber-deep);
+    border:1px solid var(--line);background:var(--paper);padding:3px 10px;border-radius:2px;letter-spacing:.02em;
   }
 
   /* ---------- fit / not fit ---------- */
@@ -186,8 +190,8 @@
   .price-alt{color:var(--ink-soft);font-size:.95rem}
   .price-note{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line);color:var(--ink-soft);font-size:.9rem;line-height:1.6}
   .price-card.beta .exchange{
-    margin-top:16px;background:rgba(24,169,156,.08);border-radius:4px;padding:16px 18px;
-    font-size:.92rem;color:var(--ink);line-height:1.65;
+    margin-top:16px;background:rgba(14,140,130,.07);border-radius:4px;padding:16px 18px;
+    font-size:.92rem;color:var(--ink);line-height:1.75;
   }
   .price-card.beta .exchange b{color:var(--teal)}
   .seats{margin-top:26px;text-align:center;font-size:1rem;color:var(--ink-soft)}
@@ -196,35 +200,24 @@
   /* ---------- testimonials (hidden until beta produces them) ---------- */
   /* TO ACTIVATE LATER: remove the `hidden` attribute on <section id="voices">,
      duplicate .voice blocks, and fill in real quotes + attribution. */
-  .voices{background:#fff;border-top:1px solid var(--line)}
+  .voices{background:var(--paper);border-top:1px solid var(--line)}
   .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
   .voice{background:var(--paper-warm);border-left:3px solid var(--teal);border-radius:0 4px 4px 0;padding:26px 28px}
   .voice p{font-size:1.02rem;color:var(--ink);font-weight:500;line-height:1.7}
   .voice .who{margin-top:16px;font-size:.88rem;color:var(--ink-soft)}
 
   /* ---------- signup ---------- */
-  .signup{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);color:#EAF1F4}
-  .signup .eyebrow{color:var(--teal-bright)}
-  .signup .eyebrow::before{background:var(--teal-bright)}
-  .signup h2{color:#fff}
-  .pay-box{
-    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:6px;
-    padding:28px 30px;margin-top:32px;
-  }
-  .pay-box .pay-h{font-family:var(--font-lat);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);font-weight:600;margin-bottom:18px}
-  .pay-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .pay-col b{display:block;color:#EAF1F4;font-size:.98rem;margin-bottom:6px}
-  .pay-col span{color:#93A9B7;font-size:.9rem}
-  .pay-fill{color:var(--amber);font-family:var(--font-lat);font-size:.85rem}
-  .pay-foot{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);color:#AEC2CE;font-size:.9rem}
+  .signup{background:var(--paper);border-top:1px solid var(--line)}
+  .signup .eyebrow{color:var(--teal)}
+  .signup .eyebrow::before{background:var(--teal)}
+  .signup h2{color:var(--ink)}
   .dm-line{
-    margin-top:34px;background:#fff;color:var(--navy-deep);border-radius:6px;
-    padding:26px 30px;
+    margin-top:34px;background:var(--navy);color:#EDEBE3;border-radius:8px;
+    padding:clamp(28px,5vw,44px) clamp(28px,5vw,48px);
   }
-  .dm-line .say{font-family:var(--font-lat);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px}
-  .dm-line .quote{font-size:1.15rem;font-weight:700;line-height:1.6}
-  .dm-line .quote .blank{border-bottom:2px solid var(--amber);padding:0 26px}
-  .dm-cta{margin-top:26px}
+  .dm-line .say{font-family:var(--font-lat);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);font-weight:600;margin-bottom:14px}
+  .dm-line .quote{font-family:var(--font-cjk);font-size:clamp(1.2rem,2.2vw,1.5rem);font-weight:600;line-height:1.55;color:#fff}
+  .dm-cta{margin-top:28px}
 
   /* ---------- footer ---------- */
   footer{background:var(--navy-deep);color:#7E93A1;padding:40px 0;font-size:.85rem}
@@ -246,6 +239,7 @@
     .hero-cta{flex-direction:column;align-items:stretch}
     .btn{justify-content:center}
     .brandline{margin-bottom:36px}
+    h1 .line{white-space:normal}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
@@ -260,7 +254,7 @@
   <div class="wrap">
     <div class="brandline"><span class="dot"></span>B2G Career Consulting <small>· 跨文化職場翻譯</small></div>
     <span class="eyebrow">Beta 梯次 · 名額 3–5 位</span>
-    <h1>把你「什麼都做過」的經歷，<br>收斂成一條<span class="hl">雇主讀得懂的價值線</span>。</h1>
+    <h1><span class="line">把你「什麼都做過」的經歷，</span><span class="line">收斂成一條<span class="hl">雇主讀得懂的價值線</span>。</span></h1>
     <p class="hero-sub">三週內，把你「亞洲邏輯」的求職素材，翻譯成英國雇主三秒看得懂的商業語言。專為在英國求職的商科、行銷、人資文組國際生。</p>
     <div class="hero-cta">
       <a href="#signup" class="btn btn-primary btn-lg">看 Beta 名額細節</a>
