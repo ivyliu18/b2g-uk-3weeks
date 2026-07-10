@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三週英國職涯釐清計畫 · B2G</title>
+<meta name="description" content="三週內，把你「亞洲邏輯」的求職素材，翻譯成英國雇主三秒讀得懂的商業價值線。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E2A47;
+    --navy-deep:#0A1E33;
+    --teal:#18A99C;
+    --teal-bright:#1FC3B4;
+    --amber:#E8A93C;
+    --amber-deep:#CE8D1E;
+    --paper:#EEF2F4;
+    --paper-warm:#F6F8F9;
+    --ink:#12222E;
+    --ink-soft:#3A4B57;
+    --line:#D3DCE1;
+    --green:#2E9E5B;
+    --red:#C6503E;
+    --shadow:0 1px 2px rgba(14,42,71,.06),0 8px 30px rgba(14,42,71,.08);
+    --font-cjk:"Noto Sans TC",system-ui,-apple-system,"Microsoft JhengHei",sans-serif;
+    --font-lat:"Space Grotesk",var(--font-cjk);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--font-cjk);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:1400px;margin:0 auto;padding:0 clamp(28px,5vw,72px)}
+  .narrow{max-width:820px}
+
+  /* ---------- eyebrow / labels ---------- */
+  .eyebrow{
+    font-family:var(--font-lat);
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--teal);font-weight:600;
+    display:inline-flex;align-items:center;gap:.6em;
+  }
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--teal);display:inline-block}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(120% 90% at 85% 0%, rgba(24,169,156,.14), transparent 55%),
+      linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:#EAF1F4;
+    padding:clamp(56px,9vw,104px) 0 clamp(72px,10vw,120px);
+    position:relative;overflow:hidden;
+  }
+  .hero .eyebrow{color:var(--teal-bright)}
+  .hero .eyebrow::before{background:var(--teal-bright)}
+  .brandline{
+    font-family:var(--font-lat);font-weight:700;letter-spacing:.04em;
+    font-size:1.05rem;color:#EAF1F4;margin-bottom:clamp(40px,7vw,64px);
+    display:flex;align-items:center;gap:.55em;
+  }
+  .brandline .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block}
+  .brandline small{font-family:var(--font-cjk);font-weight:400;color:#9FB4C1;letter-spacing:0;font-size:.8rem}
+  h1{
+    font-family:var(--font-cjk);font-weight:700;
+    font-size:clamp(1.9rem,4.8vw,3.15rem);line-height:1.5;
+    letter-spacing:.01em;margin:22px 0 0;max-width:20ch;
+  }
+  h1 .hl{color:var(--teal-bright)}
+  .hero-sub{
+    margin-top:26px;max-width:46ch;font-size:clamp(1rem,1.7vw,1.16rem);
+    color:#BCCDD8;font-weight:400;
+  }
+  .hero-cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+  /* signature: tangle -> single line */
+  .translate-viz{margin-top:clamp(48px,7vw,72px);max-width:640px}
+  .translate-viz svg{width:100%;height:auto;display:block}
+  .viz-labels{
+    display:flex;justify-content:space-between;margin-top:14px;
+    font-family:var(--font-lat);font-size:.74rem;letter-spacing:.04em;color:#8FA6B4;
+  }
+  .viz-labels b{display:block;font-family:var(--font-cjk);color:#DCE7ED;font-weight:500;font-size:.92rem;letter-spacing:0}
+  .tangle{fill:none;stroke:#5E7180;stroke-width:2;stroke-linecap:round;opacity:.85}
+  .clean{fill:none;stroke:var(--teal-bright);stroke-width:2.5;stroke-linecap:round}
+  .clean-head{fill:var(--teal-bright)}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-family:var(--font-cjk);font-weight:700;font-size:1rem;
+    padding:15px 30px;border-radius:2px;text-decoration:none;
+    transition:transform .15s ease,box-shadow .15s ease,background .15s ease;
+    border:0;cursor:pointer;
+  }
+  .btn-primary{background:var(--amber);color:var(--navy-deep)}
+  .btn-primary:hover{background:#F2B850;transform:translateY(-2px);box-shadow:0 10px 24px rgba(232,169,60,.32)}
+  .btn-ghost{background:transparent;color:#EAF1F4;border:1.5px solid rgba(234,241,244,.35)}
+  .btn-ghost:hover{border-color:var(--teal-bright);color:var(--teal-bright)}
+  .btn-lg{padding:17px 38px;font-size:1.05rem}
+
+  /* ---------- section rhythm ---------- */
+  section{padding:clamp(60px,9vw,104px) 0}
+  .sec-head{margin-bottom:clamp(32px,5vw,52px)}
+  h2{
+    font-family:var(--font-cjk);font-weight:700;
+    font-size:clamp(1.45rem,3.2vw,2.05rem);line-height:1.55;
+    letter-spacing:.01em;margin-top:16px;color:var(--ink);
+  }
+  h2 .hl{color:var(--teal)}
+  p.lead{font-size:1.06rem;color:var(--ink-soft);margin-top:18px;max-width:60ch}
+
+  /* ---------- problem ---------- */
+  .problem{background:var(--paper-warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .problem blockquote{
+    border-left:3px solid var(--amber);padding-left:22px;margin-top:30px;
+    font-size:1.12rem;color:var(--ink);font-weight:500;max-width:56ch;
+  }
+
+  /* ---------- guides ---------- */
+  .guides{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+  .guide{
+    background:#fff;border:1px solid var(--line);border-radius:4px;
+    padding:32px 30px;box-shadow:var(--shadow);position:relative;
+  }
+  .guide .role{
+    font-family:var(--font-lat);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:600;color:var(--teal);margin-bottom:6px;
+  }
+  .guide h3{font-size:1.35rem;font-weight:700;margin-bottom:12px;color:var(--ink);line-height:1.5}
+  .guide p{color:var(--ink-soft);font-size:.98rem}
+
+  /* ---------- deliverables ---------- */
+  .deliverables{background:var(--navy);color:#EAF1F4}
+  .deliverables .eyebrow{color:var(--teal-bright)}
+  .deliverables .eyebrow::before{background:var(--teal-bright)}
+  .deliverables h2{color:#fff}
+  .del-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:5px;overflow:hidden;margin-top:8px}
+  .del{background:var(--navy);padding:34px 28px;position:relative}
+  .del .num{
+    font-family:var(--font-lat);font-weight:500;font-size:.8rem;letter-spacing:.1em;
+    color:var(--teal-bright);margin-bottom:18px;display:block;
+  }
+  .del h3{font-size:1.18rem;font-weight:700;margin-bottom:10px;color:#fff;line-height:1.5}
+  .del p{color:#AEC2CE;font-size:.94rem}
+  .del .tag{
+    display:inline-block;margin-top:14px;font-size:.76rem;color:var(--amber);
+    border:1px solid rgba(232,169,60,.4);padding:3px 10px;border-radius:2px;letter-spacing:.02em;
+  }
+
+  /* ---------- fit / not fit ---------- */
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+  .fit-card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:30px 28px;box-shadow:var(--shadow)}
+  .fit-card h3{font-size:1.15rem;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:.5em;line-height:1.5}
+  .fit-card.yes{border-top:3px solid var(--green)}
+  .fit-card.no{border-top:3px solid var(--red)}
+  .fit-card.yes h3{color:var(--green)}
+  .fit-card.no h3{color:var(--red)}
+  .fit-card ul{list-style:none}
+  .fit-card li{position:relative;padding-left:28px;margin-bottom:14px;color:var(--ink-soft);font-size:.97rem;line-height:1.6}
+  .fit-card.yes li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:700}
+  .fit-card.no li::before{content:"✕";position:absolute;left:0;top:0;color:var(--red);font-weight:700}
+
+  /* ---------- pricing ---------- */
+  .pricing{background:var(--paper-warm);border-top:1px solid var(--line)}
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px;align-items:stretch}
+  .price-card{
+    background:#fff;border:1px solid var(--line);border-radius:5px;padding:36px 32px;
+    display:flex;flex-direction:column;box-shadow:var(--shadow);
+  }
+  .price-card.beta{border:2px solid var(--teal);position:relative;overflow:hidden}
+  .price-card.beta::after{
+    content:"限本梯次";position:absolute;top:18px;right:-34px;background:var(--teal);color:#fff;
+    font-size:.72rem;letter-spacing:.08em;padding:5px 40px;transform:rotate(45deg);font-weight:700;
+  }
+  .price-tier{font-family:var(--font-lat);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--ink-soft)}
+  .price-card.beta .price-tier{color:var(--teal)}
+  .price-amt{font-family:var(--font-lat);font-weight:700;font-size:2.5rem;line-height:1.1;margin:14px 0 4px;color:var(--ink)}
+  .price-amt .cur{font-size:1.4rem;vertical-align:super;margin-right:.05em}
+  .price-alt{color:var(--ink-soft);font-size:.95rem}
+  .price-note{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line);color:var(--ink-soft);font-size:.9rem;line-height:1.6}
+  .price-card.beta .exchange{
+    margin-top:16px;background:rgba(24,169,156,.08);border-radius:4px;padding:16px 18px;
+    font-size:.92rem;color:var(--ink);line-height:1.65;
+  }
+  .price-card.beta .exchange b{color:var(--teal)}
+  .seats{margin-top:26px;text-align:center;font-size:1rem;color:var(--ink-soft)}
+  .seats b{color:var(--ink);font-weight:700}
+
+  /* ---------- testimonials (hidden until beta produces them) ---------- */
+  /* TO ACTIVATE LATER: remove the `hidden` attribute on <section id="voices">,
+     duplicate .voice blocks, and fill in real quotes + attribution. */
+  .voices{background:#fff;border-top:1px solid var(--line)}
+  .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+  .voice{background:var(--paper-warm);border-left:3px solid var(--teal);border-radius:0 4px 4px 0;padding:26px 28px}
+  .voice p{font-size:1.02rem;color:var(--ink);font-weight:500;line-height:1.7}
+  .voice .who{margin-top:16px;font-size:.88rem;color:var(--ink-soft)}
+
+  /* ---------- signup ---------- */
+  .signup{background:linear-gradient(165deg,var(--navy) 0%,var(--navy-deep) 100%);color:#EAF1F4}
+  .signup .eyebrow{color:var(--teal-bright)}
+  .signup .eyebrow::before{background:var(--teal-bright)}
+  .signup h2{color:#fff}
+  .pay-box{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:6px;
+    padding:28px 30px;margin-top:32px;
+  }
+  .pay-box .pay-h{font-family:var(--font-lat);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);font-weight:600;margin-bottom:18px}
+  .pay-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .pay-col b{display:block;color:#EAF1F4;font-size:.98rem;margin-bottom:6px}
+  .pay-col span{color:#93A9B7;font-size:.9rem}
+  .pay-fill{color:var(--amber);font-family:var(--font-lat);font-size:.85rem}
+  .pay-foot{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);color:#AEC2CE;font-size:.9rem}
+  .dm-line{
+    margin-top:34px;background:#fff;color:var(--navy-deep);border-radius:6px;
+    padding:26px 30px;
+  }
+  .dm-line .say{font-family:var(--font-lat);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:12px}
+  .dm-line .quote{font-size:1.15rem;font-weight:700;line-height:1.6}
+  .dm-line .quote .blank{border-bottom:2px solid var(--amber);padding:0 26px}
+  .dm-cta{margin-top:26px}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--navy-deep);color:#7E93A1;padding:40px 0;font-size:.85rem}
+  footer .wrap{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:20px}
+  footer .fb{font-family:var(--font-lat);font-weight:700;color:#B9C9D3;letter-spacing:.04em;font-size:1rem}
+  .foot-tag{margin-top:6px;color:#7E93A1}
+  .foot-links{display:flex;flex-direction:column;gap:10px;text-align:right}
+  .foot-links a{color:#AEC2CE;text-decoration:none;font-family:var(--font-lat);letter-spacing:.02em;transition:color .15s ease}
+  .foot-links a:hover{color:var(--teal-bright)}
+  @media (max-width:560px){
+    footer .wrap{flex-direction:column}
+    .foot-links{text-align:left;align-items:flex-start}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:760px){
+    .guides,.del-grid,.fit-grid,.price-grid,.voice-grid,.pay-row{grid-template-columns:1fr}
+    .price-card.beta::after{display:none}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .btn{justify-content:center}
+    .brandline{margin-bottom:36px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+  a:focus-visible,.btn:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brandline"><span class="dot"></span>B2G Career Consulting <small>· 跨文化職場翻譯</small></div>
+    <span class="eyebrow">Beta 梯次 · 名額 3–5 位</span>
+    <h1>把你「什麼都做過」的經歷，<br>收斂成一條<span class="hl">雇主讀得懂的價值線</span>。</h1>
+    <p class="hero-sub">三週內，把你「亞洲邏輯」的求職素材，翻譯成英國雇主三秒看得懂的商業語言。專為在英國求職的商科、行銷、人資文組國際生。</p>
+    <div class="hero-cta">
+      <a href="#signup" class="btn btn-primary btn-lg">看 Beta 名額細節</a>
+      <a href="#what" class="btn btn-ghost btn-lg">這三週你會拿到什麼</a>
+    </div>
+
+    <!-- SIGNATURE: tangle collapses into one clean line -->
+    <div class="translate-viz" aria-hidden="true">
+      <svg viewBox="0 0 640 120" xmlns="http://www.w3.org/2000/svg">
+        <path class="tangle" d="M8,60 C40,20 55,100 88,58 C112,26 120,96 150,60 C178,28 190,92 214,58 C232,34 244,84 268,62"/>
+        <path class="tangle" d="M8,74 C46,102 60,30 92,72 C120,104 132,34 158,70 C186,104 196,40 220,72 C240,96 250,52 268,70" opacity=".5"/>
+        <path class="clean" d="M300,62 L604,62"/>
+        <polygon class="clean-head" points="600,54 632,62 600,70"/>
+      </svg>
+      <div class="viz-labels">
+        <span><b>你現在的素材</b>看起來什麼都會，沒有主線</span>
+        <span style="text-align:right"><b>三週後</b>一條清楚的路線</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROBLEM ============ -->
+<section class="problem">
+  <div class="wrap narrow">
+    <span class="eyebrow">為什麼你一直收到自動拒信</span>
+    <h2>問題多半不在能力，<span class="hl">在「翻譯」。</span></h2>
+    <p class="lead">在英國讀商科、行銷、人資這類文組的華語國際生，畢業求職時最常撞到的不是能力問題。亞洲長大的求職邏輯放到英國職場，很容易變成「看起來什麼都做過，卻沒有一條清楚的商業價值線」。</p>
+    <blockquote>投了幾十封還是自動拒信，多半卡在這裡。不是你不夠好，是你的故事還沒被翻譯成雇主的語言。</blockquote>
+  </div>
+</section>
+
+<!-- ============ GUIDES ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">誰帶你跑</span>
+      <h2>一個做過內容翻譯，一個坐在雇主那一側。</h2>
+    </div>
+    <div class="guides">
+      <div class="guide">
+        <div class="role">內容 × 運營視角</div>
+        <h3>Ivy</h3>
+        <p>內容與運營背景，長期在華語世界和英語職場之間做「翻譯」，把個人故事轉成雇主看得懂的商業語言。過去三個月累積 15+ 次一對一諮詢，專門拆解英國這個市場。</p>
+      </div>
+      <div class="guide">
+        <div class="role">獵頭 × 雇主視角</div>
+        <h3>Renan</h3>
+        <p>國際獵頭，長期為歐美職場尋找各領域專業人才，非常清楚 recruiter 和 hiring manager 打開一份履歷時，前十秒真正在找什麼。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERABLES ============ -->
+<section class="deliverables" id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">三週交付</span>
+      <h2>不是丟資料就結束，是陪你走完一輪投遞。</h2>
+    </div>
+    <div class="del-grid">
+      <div class="del">
+        <span class="num">01 / 諮詢</span>
+        <h3>2 次深度諮詢</h3>
+        <p>各 50 分鐘視訊。把你的背景、經歷、簽證條件，整理成一條「英國版」職涯路線，具體到你該投哪類職位、用什麼角度講你的故事，不是喊口號。</p>
+      </div>
+      <div class="del">
+        <span class="num">02 / 重寫</span>
+        <h3>履歷 + LinkedIn 全面優化</h3>
+        <p>用獵頭視角＋內容運營視角雙重過稿，重寫你的故事線和關鍵字，讓雇主三秒內看懂你的價值。</p>
+        <span class="tag">交付：改寫後履歷 + LinkedIn 修改清單</span>
+      </div>
+      <div class="del">
+        <span class="num">03 / 陪跑</span>
+        <h3>三週訊息陪跑</h3>
+        <p>在你真正開始投遞、收到初期回應的過程中，隨時微調策略。回應率低、要不要調關鍵字、某類職位該不該投，都可以隨時丟訊息。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIT / NOT FIT ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">先確認你適不適合</span>
+      <h2>我們想給你最適合你的那個選項。</h2>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-card yes">
+        <h3>這個計畫適合你，如果你</h3>
+        <ul>
+          <li>是商科、行銷、人資這類文組背景的華語國際生</li>
+          <li>現在人在英國，正在畢業或正在求職</li>
+          <li>履歷、LinkedIn、求職方向都很亂，不知道從哪裡開始</li>
+          <li>願意在三週內認真投入，一起把東西做出來</li>
+        </ul>
+      </div>
+      <div class="fit-card no">
+        <h3>這個計畫不適合你，如果你</h3>
+        <ul>
+          <li>想找的是「單純履歷」的快速修改（可以參考我們其他的單次服務）</li>
+          <li>目前沒有真的要開始投遞，只是想先了解市場</li>
+          <li>需要的是完整模擬面試訓練（這梯重點在方向與投遞，面試輔導是未來的進階計畫）</li>
+          <li>不在英國、也沒有要往英國／歐洲市場求職</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">名額與費用</span>
+      <h2>Beta 價，我們一起把內容做得更專屬。</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-tier">標準價</div>
+        <div class="price-amt"><span class="cur">£</span>250+</div>
+        <div class="price-alt">NT$ 10,000+</div>
+        <div class="price-note">未來加入 Renan 的面試輔導模組後，推出進階版標準定價。</div>
+      </div>
+      <div class="price-card beta">
+        <div class="price-tier">Beta 價</div>
+        <div class="price-amt"><span class="cur">£</span>100</div>
+        <div class="price-alt">NT$ 4,000</div>
+        <div class="exchange">Beta 價的意思是：因為梯次還小，我們可以透過和你更密集的協作，客製化更多專屬於你的內容。交換的只是走完整套流程、結束後給一份書面回饋，並允許把你的案例（<b>去識別化</b>）寫成分享內容。</div>
+      </div>
+    </div>
+    <p class="seats">本梯 beta 名額 <b>3–5 位</b>，先搶先排。</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS (hidden until beta produces real ones) ============ -->
+<!-- ACTIVATE LATER: remove `hidden` below, fill in real quotes, duplicate .voice as needed -->
+<section class="voices" id="voices" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">學員回饋</span>
+      <h2>他們走完三週之後說</h2>
+    </div>
+    <div class="voice-grid">
+      <div class="voice">
+        <p>「＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿」</p>
+        <div class="who">學員背景（如：曼大行銷碩士 / 目標 BD）</div>
+      </div>
+      <div class="voice">
+        <p>「＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿」</p>
+        <div class="who">學員背景</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNUP ============ -->
+<section class="signup" id="signup">
+  <div class="wrap narrow">
+    <span class="eyebrow">報名方式</span>
+    <h2>從你卡住的那一格空白開始。</h2>
+
+    <p class="lead" style="color:#BCCDD8;margin-bottom:8px">名額 3–5 位，先搶先排。想知道細節、確認適不適合，直接私訊我，我會依你的狀況給你最適合的建議與後續安排。</p>
+
+    <div class="dm-line">
+      <div class="say">私訊我，第一句只要寫</div>
+      <div class="quote">「3 週陪跑計畫。」</div>
+      <div class="dm-cta">
+        <a href="https://www.threads.com/@b2g.2026" target="_blank" rel="noopener" class="btn btn-primary btn-lg">私訊 B2G Threads</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-brand">
+      <div class="fb">B2G Career Consulting</div>
+      <div class="foot-tag">跨文化職場翻譯 · 幫華語專業人才讀懂國際職場</div>
+    </div>
+    <nav class="foot-links" aria-label="社群與聯絡">
+      <a href="https://www.threads.com/@b2g.2026" target="_blank" rel="noopener">Threads @b2g.2026</a>
+      <a href="mailto:b2g.career.2026@gmail.com">b2g.career.2026@gmail.com</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
